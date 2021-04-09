@@ -1,0 +1,25 @@
+// my solution
+function isPangram(string){
+  string = string.toLowerCase();
+  return "abcdefghijklmnopqrstuvwxyz".split('').every((e) => {
+    return string.indexOf(e) !== -1
+  })
+}
+
+// smart solution :)
+function isPangram(string){
+  return (string.match(/([a-z](?!.*\1)/ig) || []).length === 26;
+}
+
+
+# my solution
+def is_pangram(s):
+    s = s.lower()
+    for i in 'abcdefghijklmnopqrstuvwxyz':
+        if i not in s:
+            return False
+    return True
+
+# smarter solution
+def is_pangram(s):
+    return set(s.lower()) >= set(string.ascii_lowercase)
