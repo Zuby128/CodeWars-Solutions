@@ -1,0 +1,7 @@
+QUESTION:
+A palindrome word is a sequence of characters which reads the same backward as forward, such as madam, racecar.
+Define a JS function whether a word is palindrome or not.
+
+(function(word) {
+  word == word.split('').reverse().join('') ? alert(`${word} is a palindrome`) : alert(`${word} is not palindrome\nTry again!`)
+})(prompt('please enter a word'))
