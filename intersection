@@ -1,0 +1,9 @@
+QUESTION:
+Write a JS code to find intersection of 3 lists at below.
+list1 = [11, 4, 5, 9, 7]
+list2 = [5, 10, 4, 1, 10]
+list3 = [7, 3, 9, 5, 1]
+
+const intersection = []
+list3.forEach((i) => {if (list2.includes(i) && list1.includes(i)) {intersection.push(i)}})
+console.log(intersection)
