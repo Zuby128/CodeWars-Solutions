@@ -1,0 +1,23 @@
+QUESTION:
+Write a JS code to process mathematical operations in a list like below.
+operations = ["5 + 6", "2 * 3", "8 / 4", "4 - 5"]
+output :   11, 6, 2, -1
+operations = ["3 + 4", "3 * 4", "4 * 5"]
+output : 7, 12, 20
+
+
+// solution one
+for(let i of operations) {
+  i=i.split(' ')
+  if (i[1]=='+') {console.log(Number(i[0])+Number(i[2]))}
+  else if (i[1]=='*') {console.log(Number(i[0])*Number(i[2]))}
+  else if (i[1]=='-') {console.log(Number(i[0])-Number(i[2]))}
+  else if (i[1]=='/') {console.log(Number(i[0])/Number(i[2]))}
+}
+
+// solution two
+y = []
+for(i=0; i<operations.length; i++) {
+  k = y.push(eval(operations[i]))
+} 
+console.log(y)
