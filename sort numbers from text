@@ -1,0 +1,12 @@
+QUESTION:
+Write a JS code to find the numbers that are grater than 150 at below text, and sort these numbers.
+text = "Maradona spent 5 years at Argentinos Juniors, from 1976 to 1981 , scoring 115 goals in 167 appearances."
+
+
+const text = "Maradona spent 5 years at Argentinos Juniors, from 1976 to 1981 , scoring 115 goals in 167 appearances."
+let numbers = []
+const arr = text.split(' ')
+arr.forEach((item) => {
+  !isNaN(item) ? numbers.push(Number(item)) : null
+})
+console.log(numbers.filter((num) => num > 150).sort())
